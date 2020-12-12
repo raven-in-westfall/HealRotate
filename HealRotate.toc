@@ -1,0 +1,36 @@
+## Interface: 11305
+## Title: HealRotate |cff00aa001.4.0|r
+## Notes: A healshot rotation assistant
+## Author: Slivo
+## Version: 1.4.0
+## SavedVariables: HealRotateDb
+## OptionalDeps: Ace3
+
+#@no-lib-strip@
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceDB-3.0\AceDB-3.0.xml
+libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+libs\AceGUI-3.0\AceGUI-3.0.xml
+libs\AceConfig-3.0\AceConfig-3.0.xml
+libs\AceComm-3.0\AceComm-3.0.xml
+libs\AceSerializer-3.0\AceSerializer-3.0.xml
+#@end-no-lib-strip@
+
+locales\enUS.lua
+locales\frFR.lua
+locales\zhCN.lua
+locales\zhTW.lua
+locales\ruRU.lua
+
+src\healRotate.lua
+src\events.lua
+src\rotation.lua
+src\constants.lua
+src\frames.lua
+src\gui.lua
+src\dragdrop.lua
+src\comms.lua
+src\defaults.lua
+src\settings.lua
+src\utils.lua
