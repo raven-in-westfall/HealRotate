@@ -63,23 +63,6 @@ function HealRotate:getIdFromGuid(guid)
     return type, tonumber(mobId)
 end
 
--- Checks if the spell and the mob match a boss frenzy
-function HealRotate:isBossFrenzy(spellName, guid)
-
-    local bosses = HealRotate.constants.bosses
-    local type, mobId = HealRotate:getIdFromGuid(guid)
-
-    if (type == "Creature") then
-        for bossId, frenzy in pairs(bosses) do
-            if (bossId == mobId and spellName == GetSpellInfo(frenzy)) then
-                return true
-            end
-        end
-    end
-
-    return false
-end
-
 -- Checks if the mob is a heal-able boss
 function HealRotate:isHealableBoss(guid)
 
@@ -91,20 +74,6 @@ function HealRotate:isHealableBoss(guid)
             if (bossId == mobId) then
                 return true
             end
-        end
-    end
-
-    return false
-end
-
--- Checks if the spell is a boss frenzy
-function HealRotate:isFrenzy(spellName)
-
-    local bosses = HealRotate.constants.bosses
-
-    for bossId, frenzy in pairs(bosses) do
-        if (spellName == GetSpellInfo(frenzy)) then
-            return true
         end
     end
 
