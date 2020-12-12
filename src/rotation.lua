@@ -55,14 +55,10 @@ end
 
 -- Update the rotation list once a heal has been done.
 -- The parameter is the healer that used it's heal (successfully or not)
-function HealRotate:rotate(lastHealer, fail, rotateWithoutCooldown)
-
-    -- Default value to false
-    fail = fail or false
+function HealRotate:rotate(lastHealer, rotateWithoutCooldown)
 
     local playerName, realm = UnitName("player")
     local healerRotationTable = HealRotate:getHealerRotationTable(lastHealer)
-    local hasPlayerFailed = playerName == lastHealer.name and fail
 
     lastHealer.lastHealTime = GetTime()
 
@@ -77,29 +73,11 @@ function HealRotate:rotate(lastHealer, fail, rotateWithoutCooldown)
         if (nextHealer ~= nil) then
 
             HealRotate:setNextHeal(nextHealer)
-
-            if (HealRotate:isHealerHealCooldownReady(nextHealer)) then
-                if (#HealRotate.rotationTables.backup < 1) then
-                    if (hasPlayerFailed) then
-                        SendChatMessage(HealRotate.db.profile.whisperFailMessage, 'WHISPER', nil, nextHealer.name)
-                    end
-                end
-            end
         end
     end
 
     if (HealRotate:isPlayerNextHeal()) then
         HealRotate:throwHealAlert()
-    end
-end
-
--- Whisper fail message to all backup except player
-function HealRotate:whisperBackup()
-    local name, realm = UnitName("player")
-    for key, backupHealer in pairs(HealRotate.rotationTables.backup) do
-        if (backupHealer.name ~= name) then
-            SendChatMessage(HealRotate.db.profile.whisperFailMessage, 'WHISPER', nil, backupHealer.name)
-        end
     end
 end
 

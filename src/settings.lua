@@ -161,18 +161,6 @@ function HealRotate:CreateConfig()
                         order = 24,
                         width = "double",
                     },
-                    announceFailMessage = {
-                        name = L["FAIL_MESSAGE_LABEL"],
-                        type = "input",
-                        order = 25,
-                        width = "double",
-                    },
-                    whisperFailMessage = {
-                        name = L["FAIL_WHISPER_LABEL"],
-                        type = "input",
-                        order = 26,
-                        width = "double",
-                    },
                     setupBroadcastHeader = {
                         name = L["BROADCAST_MESSAGE_HEADER"],
                         type = "header",

@@ -53,13 +53,9 @@ local L = {
     ["ANNOUNCES_MESSAGE_HEADER"] = "Announce messages",
     ["SUCCESS_MESSAGE_LABEL"] = "Start cast announce message",
     ["SUCCESS_MESSAGE_LABEL"] = "Finish cast announce message",
-    ["FAIL_MESSAGE_LABEL"] = "Fail announce message",
-    ["FAIL_WHISPER_LABEL"] = "Fail whisper message",
 
     ['DEFAULT_START_ANNOUNCE_MESSAGE'] = "Starting cast of %s",
     ['DEFAULT_STOP_ANNOUNCE_MESSAGE'] = "Finished casting",
-    ['DEFAULT_FAIL_ANNOUNCE_MESSAGE'] = "!!! HEALSHOT FAILED ON %s !!!",
-    ['DEFAULT_FAIL_WHISPER_MESSAGE'] = "HEALSHOT FAILED ! HEAL NOW !",
 
     ['HEAL_NOW_LOCAL_ALERT_MESSAGE'] = "YOU ARE NEXT ON DECK !",
 

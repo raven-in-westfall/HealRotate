@@ -45,7 +45,7 @@ function HealRotate:COMBAT_LOG_EVENT_UNFILTERED()
                 HealRotate:sendAnnounceMessage(HealRotate.db.profile.announceStartMessage, spellName)
             end
         elseif (event == "SPELL_CAST_SUCCESS") then
-            HealRotate:sendSyncHeal(healer, false, timestamp)
+            HealRotate:sendSyncHeal(healer, timestamp)
             HealRotate:rotate(healer, false)
             if  (sourceGUID == UnitGUID("player")) then
                 HealRotate:sendAnnounceMessage(HealRotate.db.profile.announceStopMessage, spellName)

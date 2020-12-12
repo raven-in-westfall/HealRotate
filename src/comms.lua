@@ -65,12 +65,11 @@ end
 -----------------------------------------------------------------------------------------------------------------------
 
 -- Broadcast a healshot event
-function HealRotate:sendSyncHeal(healer, fail, timestamp)
+function HealRotate:sendSyncHeal(healer, timestamp)
     local message = {
         ['type'] = HealRotate.constants.commsTypes.healshotDone,
         ['timestamp'] = timestamp,
         ['player'] = healer.name,
-        ['fail'] = fail,
     }
 
     HealRotate:sendRaidAddonMessage(message)
@@ -114,10 +113,6 @@ function HealRotate:receiveSyncHeal(prefix, message, channel, sender)
 
     local healer = HealRotate:getHealer(message.player)
     local notDuplicate = healer.lastHealTime <  GetTime() - HealRotate.constants.duplicateHealshotDelayThreshold
-
-    if (healer ~= nil and notDuplicate) then
-        HealRotate:rotate(HealRotate:getHealer(message.player), message.fail)
-    end
 end
 
 -- Rotation configuration received
