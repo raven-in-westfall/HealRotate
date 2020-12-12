@@ -40,6 +40,8 @@ function HealRotate:COMBAT_LOG_EVENT_UNFILTERED()
     -- @todo try to refactor a bit
     if HealRotate.healingSpells[spellName] == 1 then
         local healer = HealRotate:getHealer(nil, sourceGUID)
+        -- if we are in test mode and someone near us, not in our rotation casts a heal spell we might get a nil
+        if healer ~= nil then return end
         if event == 'SPELL_CAST_START' then
             if  (sourceGUID == UnitGUID("player")) then
                 HealRotate:sendAnnounceMessage(HealRotate.db.profile.announceStartMessage, spellName)
