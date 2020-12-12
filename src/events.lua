@@ -30,7 +30,7 @@ eventFrame:SetScript(
 function HealRotate:COMBAT_LOG_EVENT_UNFILTERED()
     -- @todo : Improve this with register / unregister event to save ressources
     -- Avoid parsing combat log when not able to use it
---    if not HealRotate.raidInitialized then return end
+    if not HealRotate.raidInitialized then return end
     -- Avoid parsing combat log when outside instance if test mode isn't enabled
 --    if not HealRotate.testMode and not IsInInstance() then return end
 
