@@ -22,12 +22,12 @@ local L = {
     ["WINDOW_UNLOCKED"] = "HealRotate: Window unlocked",
 
     ["TEST_MODE_HEADER"] = "Test mode",
-    ["ENABLE_ARCANE_SHOT_TESTING"] = "Toggle testing mode",
-    ["ENABLE_ARCANE_SHOT_TESTING_DESC"] =
-        "While testing mode is enabled, arcane shot will be registered as a healshot\n" ..
+    ["ENABLE_TESTING"] = "Toggle testing mode",
+    ["ENABLE_TESTING_DESC"] =
+        "While testing mode is enabled, any heal will trigger events even if not fighting Lothab\n" ..
         "Testing mode will last 10 minutes unless you toggle it off",
-    ["ARCANE_SHOT_TESTING_ENABLED"] = "Arcane shot testing mode enabled for 10 minutes",
-    ["ARCANE_SHOT_TESTING_DISABLED"] = "Arcane shot testing mode disabled",
+    ["TESTING_ENABLED"] = "Testing mode enabled for 10 minutes, any heal will count",
+    ["TESTING_DISABLED"] = "Testing mode disabled",
 
     --- Announces
     ["SETTING_ANNOUNCES"] = "Announces",

@@ -20,6 +20,7 @@ function HealRotate:init()
     HealRotate.healerTable = {}
     HealRotate.rotationTables = { rotation = {}, backup = {} }
     HealRotate.enableDrag = true
+    HealRotate.fightingLothab = false
 
     HealRotate.raidInitialized = false
     HealRotate.testMode = false
@@ -121,6 +122,10 @@ SlashCmdList["HEALROTATE"] = function(msg)
         HealRotate:printRotationSetup()
     elseif (cmd == 'settings') then
         HealRotate:openSettings()
+    elseif (cmd == 'start') then
+        HealRotate:startYelling()
+    elseif (cmd == 'stop') then
+        HealRotate:stopYelling()
     else
         HealRotate:printHelp()
     end
@@ -138,7 +143,7 @@ end
 -- @todo: remove this
 function HealRotate:test()
     HealRotate:printMessage('test')
-    HealRotate:toggleArcaneShotTesting()
+    HealRotate:toggleTesting()
 end
 
 -- Open ace settings
@@ -222,19 +227,19 @@ function HealRotate:isHealerPromoted(name)
     return false
 end
 
--- Toggle arcane shot testing mode
-function HealRotate:toggleArcaneShotTesting(disable)
+-- Toggle testing mode
+function HealRotate:toggleTesting(disable)
 
     if (not disable and not HealRotate.testMode) then
-        HealRotate:printPrefixedMessage(L['ARCANE_SHOT_TESTING_ENABLED'])
+        HealRotate:printPrefixedMessage(L['TESTING_ENABLED'])
         HealRotate.testMode = true
 
         -- Disable testing after 10 minutes
         C_Timer.After(600, function()
-            HealRotate:toggleArcaneShotTesting(true)
+            HealRotate:toggleTesting(true)
         end)
     else
         HealRotate.testMode = false
-        HealRotate:printPrefixedMessage(L['ARCANE_SHOT_TESTING_DISABLED'])
+        HealRotate:printPrefixedMessage(L['TESTING_DISABLED'])
     end
 end

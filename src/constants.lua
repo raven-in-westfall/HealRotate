@@ -3,6 +3,7 @@ local HealRotate = select(2, ...)
 HealRotate.colors = {
     ['green'] = CreateColor(0.67, 0.83, 0.45),
     ['darkGreen'] = CreateColor(0.1, 0.4, 0.1),
+    ['darkRed'] = CreateColor(0.4, 0.1, 0.1),
     ['blue'] = CreateColor(0.3, 0.3, 0.7),
     ['red'] = CreateColor(0.7, 0.3, 0.3),
     ['gray'] = CreateColor(0.3, 0.3, 0.3),
@@ -72,4 +73,10 @@ HealRotate.healingSpells = {
     ['Holy Light'] = 1,
     ['Flash of Light'] = 1,
     ['Holy Shock'] = 1
+}
+
+HealRotate.debuffs = {
+    ['29185'] = 1,
+    ['2920'] = 1,
+    ['2919'] = 1,
 }

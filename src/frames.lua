@@ -156,6 +156,7 @@ function HealRotate:createHealerFrame(healer, parentFrame)
     healer.frame.text:SetText(healer.name)
 
     HealRotate:createCooldownFrame(healer)
+    HealRotate:createCastFrame(healer)
     HealRotate:configureHealerFrameDrag(healer)
 
     if (HealRotate.enableDrag) then
@@ -199,4 +200,42 @@ function HealRotate:createCooldownFrame(healer)
     )
 
     healer.frame.cooldownFrame:Hide()
+end
+
+-- Create the cast frame
+function HealRotate:createCastFrame(healer)
+
+    -- Frame
+    healer.frame.castFrame = CreateFrame("Frame", nil, healer.frame)
+    healer.frame.castFrame:SetPoint('LEFT', 5, 0)
+    healer.frame.castFrame:SetPoint('RIGHT', -5, 0)
+    healer.frame.castFrame:SetPoint('TOP', 0, -17)
+    healer.frame.castFrame:SetHeight(3)
+
+    -- background
+    healer.frame.castFrame.background = healer.frame.castFrame:CreateTexture(nil, "ARTWORK")
+    healer.frame.castFrame.background:SetColorTexture(0,0,0,1)
+    healer.frame.castFrame.background:SetAllPoints()
+
+    local statusBar = CreateFrame("StatusBar", nil, healer.frame.castFrame)
+    statusBar:SetAllPoints()
+    statusBar:SetMinMaxValues(0,1)
+    statusBar:SetStatusBarTexture("Interface\\AddOns\\HealRotate\\textures\\steel.tga")
+    statusBar:GetStatusBarTexture():SetHorizTile(false)
+    statusBar:GetStatusBarTexture():SetVertTile(false)
+    statusBar:SetStatusBarColor(0, 1, 0)
+    healer.frame.castFrame.statusBar = statusBar
+
+    healer.frame.castFrame:SetScript(
+        "OnUpdate",
+        function(self, elapsed)
+            self.statusBar:SetValue(GetTime())
+
+            if (self.statusBar.exirationTime < GetTime()) then
+                self:Hide()
+            end
+        end
+    )
+
+    healer.frame.castFrame:Hide()
 end

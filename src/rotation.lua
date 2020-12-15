@@ -65,6 +65,8 @@ function HealRotate:rotate(lastHealer, rotateWithoutCooldown)
     -- Do not trigger cooldown when rotation from a dead or disconnected status
     if (rotateWithoutCooldown ~= true) then
         HealRotate:startHealerCooldown(lastHealer)
+    else
+        HealRotate:hideHealerCooldown(lastHealer)
     end
 
     if (healerRotationTable == HealRotate.rotationTables.rotation) then

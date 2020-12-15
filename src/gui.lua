@@ -126,11 +126,22 @@ function setHealerFrameColor(healer)
     healer.frame.texture:SetVertexColor(color:GetRGB())
 end
 
+function HealRotate:hideHealerCooldown(healer)
+    healer.frame.cooldownFrame:Hide()
+end
+
 function HealRotate:startHealerCooldown(healer)
     healer.frame.cooldownFrame.statusBar:SetMinMaxValues(GetTime(), GetTime() + 60)
     healer.frame.cooldownFrame.statusBar.exirationTime = GetTime() + 60
     healer.frame.cooldownFrame:Show()
 end
+
+function HealRotate:startHealerCast(healer, spell_cast_duration)
+    healer.frame.castFrame.statusBar:SetMinMaxValues(GetTime(), GetTime() + spell_cast_duration)
+    healer.frame.castFrame.statusBar.exirationTime = GetTime() + spell_cast_duration 
+    healer.frame.castFrame:Show()
+end
+    
 
 -- Lock/Unlock the mainFrame position
 function HealRotate:lock(lock)

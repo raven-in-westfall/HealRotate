@@ -93,8 +93,8 @@ function HealRotate:CreateConfig()
                         type = "header",
                         order = 10,
                     },
-                    ToggleArcaneShotTestingDesc = {
-                        name = L['ENABLE_ARCANE_SHOT_TESTING_DESC'],
+                    ToggleTestingDesc = {
+                        name = L['ENABLE_TESTING_DESC'],
                         type = "description",
                         width = "full",
                         order = 11,
@@ -105,11 +105,11 @@ function HealRotate:CreateConfig()
                         width = "full",
                         order = 12,
                     },
-                    ToggleArcaneShotTesting = {
-                        name = L["ENABLE_ARCANE_SHOT_TESTING"],
+                    ToggleTesting = {
+                        name = L["ENABLE_TESTING"],
                         type = "execute",
                         order = 13,
-                        func = function() HealRotate.toggleArcaneShotTesting() end
+                        func = function() HealRotate.toggleTesting() end
                     }
                 }
             },
