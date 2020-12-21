@@ -35,7 +35,7 @@ function HealRotate:COMBAT_LOG_EVENT_UNFILTERED()
     local spellId, spellName, spellSchool, amount, overkill, school, resisted, blocked, absorbed, critical, glancing, crushing, isOffHand = select(12, CombatLogGetCurrentEventInfo())
 
     -- @todo try to refactor a bit
-    if HealRotate.healingSpells[spellName] == 1 then
+    if HealRotate.healingSpells[spellName] ~= nil then
         local healer = HealRotate:getHealer(nil, sourceGUID)
         -- if we are in test mode and someone near us, not in our rotation casts a heal spell we might get a nil
         if healer == nil then return end
@@ -43,15 +43,11 @@ function HealRotate:COMBAT_LOG_EVENT_UNFILTERED()
             if  (sourceGUID == UnitGUID("player")) then
                 HealRotate:sendAnnounceMessage(HealRotate.db.profile.announceStartMessage, spellName)
             end
-            local name, rank, icon, castTime, minRange, maxRange = GetSpellInfo(spellName)
-            HealRotate:startHealerCast(healer, castTime/1000)
+            HealRotate:startHealerCast(healer, HealRotate.healingSpells[spellName])
         elseif (event == "SPELL_CAST_SUCCESS") then
             local dont_set_timeout = true
-            for spell_id, junk in pairs(HealRotate.debuffs) do
-                name, rank, icon, count, debuffType, duration, expirationTime, unitCaster, isStealable, shouldConsolidate, spellId = UnitDebuff(sourceGUID, spell_id)
-                if name ~= nil then
-                    dont_set_timeout = false
-                end
+            if UnitAffectingCombat(sourceGUID) then
+                dont_set_timeout = false
             end
             if HealRotate.testMode then
                 dont_set_timeout = false

@@ -57,22 +57,23 @@ HealRotate.constants = {
 }
 
 HealRotate.healingSpells = {
-    ['Lesser Heal'] = 1,
-    ['Heal'] = 1,
-    ['Flash Heal'] = 1,
-    ['Renew'] = 1,
-    ['Prayer of Healing'] = 1,
-    ['Holy Nova'] = 1,
-    ['Desperate Prayer'] = 1,
-    ['Power Word: Shield'] = 1,
-    ['Greater Heal'] = 1,
-    ['Healing Touch'] = 1,
-    ['Regrowth'] = 1,
-    ['Rejuvenation'] = 1,
-    ['Swiftmend'] = 1,
-    ['Holy Light'] = 1,
-    ['Flash of Light'] = 1,
-    ['Holy Shock'] = 1
+    ['Lesser Heal'] = 2.5,
+    ['Heal'] = 2.5,
+    ['Flash Heal'] = 1.5,
+    ['Renew'] = 0,
+    ['Prayer of Healing'] = 3,
+    ['Holy Nova'] = 0,
+    ['Desperate Prayer'] = 0,
+    ['Power Word: Shield'] = 0,
+    ['Greater Heal'] = 2.5,
+    ['Healing Touch'] = 3.5,
+    ['Regrowth'] = 2,
+    ['Rejuvenation'] = 0,
+    ['Swiftmend'] = 0,
+    ['Holy Light'] = 2.5,
+    ['Flash of Light'] = 1.5,
+    ['Holy Shock'] = 0,
+    ['Lay on Hands'] = 0,
 }
 
 HealRotate.debuffs = {

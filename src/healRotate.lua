@@ -142,7 +142,6 @@ end
 
 -- @todo: remove this
 function HealRotate:test()
-    HealRotate:printMessage('test')
     HealRotate:toggleTesting()
 end
 

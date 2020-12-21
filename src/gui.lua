@@ -131,12 +131,14 @@ function HealRotate:hideHealerCooldown(healer)
 end
 
 function HealRotate:startHealerCooldown(healer)
+    healer.frame.castFrame:Hide()
     healer.frame.cooldownFrame.statusBar:SetMinMaxValues(GetTime(), GetTime() + 60)
     healer.frame.cooldownFrame.statusBar.exirationTime = GetTime() + 60
     healer.frame.cooldownFrame:Show()
 end
 
 function HealRotate:startHealerCast(healer, spell_cast_duration)
+    healer.frame.cooldownFrame:Hide()
     healer.frame.castFrame.statusBar:SetMinMaxValues(GetTime(), GetTime() + spell_cast_duration)
     healer.frame.castFrame.statusBar.exirationTime = GetTime() + spell_cast_duration 
     healer.frame.castFrame:Show()
