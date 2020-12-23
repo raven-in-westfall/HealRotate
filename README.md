@@ -7,7 +7,7 @@ Even if none of your healers use the addon!
 
 ![Screenshot](docs/screenshots/screenshot.png "ui")
 
-This is based off of TranqRotate initialy published by Slivo-fr : https://github.com/Slivo-fr/HealRotate
+This is based off of TranqRotate initialy published by Slivo-fr : https://github.com/Slivo-fr/TranqRotate
 
 ## Feedback
 
