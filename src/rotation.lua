@@ -264,8 +264,7 @@ function HealRotate:updateRaidStatus()
                 local GUID = UnitGUID(name)
                 local healer
 
-                if(select(2,UnitClass(name)) == 'PRIEST') or (select(2, UnitClass(name)) == 'DRUID') or (select(2, UnitClass(name)) == 'PALADIN') then
-
+                if HealRotate.classes[select(2,UnitClass(name))] ~= nil then
                     local registered = HealRotate:isHealerRegistered(GUID)
 
                     if (not registered) then

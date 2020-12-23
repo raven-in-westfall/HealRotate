@@ -54,7 +54,6 @@ It will whisper all backup healers the fail message.
 Here is a list of feature I want to implement at some point, no specific order is decided yet.
 
 - Adds RL/Raid assist handling to restrict rotation groups changes
-- Roll in shaman support
 - Change active healer color
 - Get cast bar to reflect actual times of spells. Right now we are just using the base cast time which may be altered by skills or trinkets
 

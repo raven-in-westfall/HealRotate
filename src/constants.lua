@@ -74,10 +74,20 @@ HealRotate.healingSpells = {
     ['Flash of Light'] = 1.5,
     ['Holy Shock'] = 0,
     ['Lay on Hands'] = 0,
+    ['Healing Wave'] = 3,
+    ['Chain Heal'] = 2.5,
+    ['Lesser Healing Wave'] = 1.5,
 }
 
 HealRotate.debuffs = {
     ['29185'] = 1,
     ['2920'] = 1,
     ['2919'] = 1,
+}
+
+HealRotate.classes = {
+    ['PRIEST'] = 1,
+    ['DRUID'] = 1,
+    ['PALADIN'] = 1,
+    ['SHAMAN'] = 1,
 }
