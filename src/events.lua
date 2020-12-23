@@ -44,6 +44,8 @@ function HealRotate:COMBAT_LOG_EVENT_UNFILTERED()
                 HealRotate:sendAnnounceMessage(HealRotate.db.profile.announceStartMessage, spellName)
             end
             HealRotate:startHealerCast(healer, HealRotate.healingSpells[spellName])
+        elseif (event == "SPELL_CAST_FAILED") then
+            HealRotate:stopHealerCast(healer)
         elseif (event == "SPELL_CAST_SUCCESS") then
             local dont_set_timeout = true
             if UnitAffectingCombat(sourceGUID) then

@@ -143,6 +143,11 @@ function HealRotate:startHealerCast(healer, spell_cast_duration)
     healer.frame.castFrame.statusBar.exirationTime = GetTime() + spell_cast_duration 
     healer.frame.castFrame:Show()
 end
+
+function HealRotate:stopHealerCast(healer)
+    healer.frame.cooldownFrame:Hide()
+    healer.frame.castFrame:Hide()
+end
     
 
 -- Lock/Unlock the mainFrame position
