@@ -120,7 +120,7 @@ function setHealerFrameColor(healer)
     elseif (not HealRotate:isHealerAlive(healer)) then
         color = HealRotate.colors.red
     elseif (healer.nextHeal) then
-        color = HealRotate.colors.purple
+        color = HealRotate.colors.nextcaster
     end
 
     healer.frame.texture:SetVertexColor(color:GetRGB())

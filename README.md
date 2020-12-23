@@ -39,7 +39,7 @@ First step is to setup your heal rotation using drag & drop on healers, if other
 You may use the trumpet button to report the rotation in raid chat so others players without the addon can know what you planned. 
 Please note the backup group is hidden if empty but you can still drag healers into it.
 
-You can now just pull the boss and start healing, HealRotate will track the rotation and use a purple color on the next healer that should heal. HealRotate will play sounds when the previous healer healed and you are the next.
+You can now just pull the boss and start healing, HealRotate will track the rotation and use a green color on the next healer that should heal. HealRotate will play sounds when the previous healer healed and you are the next.
 
 **Warning** : if all of your healers does not use the addon, make sure someone with the addon stays within 45m range of healers without the addon or you won't be able to register their rotation.
 
@@ -54,7 +54,6 @@ It will whisper all backup healers the fail message.
 Here is a list of feature I want to implement at some point, no specific order is decided yet.
 
 - Adds RL/Raid assist handling to restrict rotation groups changes
-- Change active healer color
 - Get cast bar to reflect actual times of spells. Right now we are just using the base cast time which may be altered by skills or trinkets
 
 ## Download
