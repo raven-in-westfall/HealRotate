@@ -5,9 +5,11 @@ This is intended to help on Lothab in Naxx.
 It also allow non-healer raid leaders to easily manage, report and watch the heal rotation live. 
 Even if none of your healers use the addon! 
 
-![Screenshot](docs/screenshots/screenshot.png "ui") ![Screenshot](docs/screenshots/drag.gif "ui")  ![Screenshot](docs/screenshots/rotation.gif "ui")
+![Screenshot](docs/screenshots/screenshot.png "ui")
+[//]: # ![Screenshot](docs/screenshots/drag.gif "ui")  ![Screenshot](docs/screenshots/rotation.gif "ui")
 
-This is based off of TranqRotate initial published by Slivo-fr : https://github.com/Slivo-fr/HealRotate/issues
+This is based off of TranqRotate initialy published by Slivo-fr : https://github.com/Slivo-fr/HealRotate
+
 ## Feedback
 
 Please report any issue using github issues : https://github.com/raven-in-westfall/HealRotate/issues
@@ -15,6 +17,7 @@ Please report any issue using github issues : https://github.com/raven-in-westfa
 ## Features
 
 - Automatically send messages to notify others player about your heal
+- Show cast time of heals
 - Display the list of raid healers
 - Allow player to re-order players between two groups : main rotation and backup
 - Synchronize rotation order between player using the addon
@@ -52,13 +55,15 @@ It will whisper all backup healers the fail message.
 Here is a list of feature I want to implement at some point, no specific order is decided yet.
 
 - Adds RL/Raid assist handling to restrict rotation groups changes
-- Automatic handling of death and disconnection of healers on the rotation group (swap with a backup, send an alert about it)
-- Use raid symbols to mark healers that need to heal, or that need to backup a failed healshot
-- Automatic reset of rotation when raid wipe
-- Frenzy cooldown/duration progress bar
+- Roll in shaman support
+- Get cast bar to reflect actual times of spells. Right now we are just using the base cast time which may be altered by skills or trinkets
+[//]: # - Automatic handling of death and disconnection of healers on the rotation group (swap with a backup, send an alert about it)
+[//]: # - Use raid symbols to mark healers that need to heal, or that need to backup a failed healshot
+[//]: # - Automatic reset of rotation when raid wipe
+[//]: # - Frenzy cooldown/duration progress bar
 
 ## Download
 
-Do not use github download button on this page, get the latest release zip file from https://github.com/Slivo-fr/HealRotate/releases
+[//]: # Do not use github download button on this page, get the latest release zip file from https://github.com/Slivo-fr/HealRotate/releases
 
-Also available here https://www.curseforge.com/wow/addons/healrotate and there https://wowclassicui.com/fr/addons/healrotate
+[//]: # Also available here https://www.curseforge.com/wow/addons/healrotate and there https://wowclassicui.com/fr/addons/healrotate
