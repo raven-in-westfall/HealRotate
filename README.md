@@ -6,7 +6,6 @@ It also allow non-healer raid leaders to easily manage, report and watch the hea
 Even if none of your healers use the addon! 
 
 ![Screenshot](docs/screenshots/screenshot.png "ui")
-[//]: # ![Screenshot](docs/screenshots/drag.gif "ui")  ![Screenshot](docs/screenshots/rotation.gif "ui")
 
 This is based off of TranqRotate initialy published by Slivo-fr : https://github.com/Slivo-fr/HealRotate
 
@@ -56,14 +55,11 @@ Here is a list of feature I want to implement at some point, no specific order i
 
 - Adds RL/Raid assist handling to restrict rotation groups changes
 - Roll in shaman support
+- Change active healer color
 - Get cast bar to reflect actual times of spells. Right now we are just using the base cast time which may be altered by skills or trinkets
-[//]: # - Automatic handling of death and disconnection of healers on the rotation group (swap with a backup, send an alert about it)
-[//]: # - Use raid symbols to mark healers that need to heal, or that need to backup a failed healshot
-[//]: # - Automatic reset of rotation when raid wipe
-[//]: # - Frenzy cooldown/duration progress bar
 
 ## Download
 
-[//]: # Do not use github download button on this page, get the latest release zip file from https://github.com/Slivo-fr/HealRotate/releases
+Do not use github download button on this page, get the latest release zip file from https://github.com/raven-in-westfall/HealRotate/releases
 
-[//]: # Also available here https://www.curseforge.com/wow/addons/healrotate and there https://wowclassicui.com/fr/addons/healrotate
+Might be available on curseforge someday...
