@@ -1,8 +1,8 @@
 ## Interface: 11305
 ## Title: HealRotate |cff00aa001.4.0|r
-## Notes: A healshot rotation assistant
-## Author: Slivo
-## Version: 1.4.0
+## Notes: A healer rotation assistant
+## Author: raven-in-westfall
+## Version: 1.0.0-beta2
 ## SavedVariables: HealRotateDb
 ## OptionalDeps: Ace3
 
@@ -18,10 +18,6 @@ libs\AceSerializer-3.0\AceSerializer-3.0.xml
 #@end-no-lib-strip@
 
 locales\enUS.lua
-locales\frFR.lua
-locales\zhCN.lua
-locales\zhTW.lua
-locales\ruRU.lua
 
 src\healRotate.lua
 src\events.lua
