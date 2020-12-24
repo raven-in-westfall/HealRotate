@@ -55,6 +55,12 @@ Here is a list of feature I want to implement at some point, no specific order i
 
 - Adds RL/Raid assist handling to restrict rotation groups changes
 - Get cast bar to reflect actual times of spells. Right now we are just using the base cast time which may be altered by skills or trinkets
+- Modify test to automatically put you in /heal start mode
+- Validate all heal spells are enabled (for all classes)
+- Try to only show cooldown bar if debuff is appled
+- Have reset hide the red bar
+- Hide window as a permenent setting
+- Save order on a per toon basis
 
 ## Download
 
