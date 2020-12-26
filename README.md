@@ -66,4 +66,4 @@ Here is a list of feature I want to implement at some point, no specific order i
 
 Do not use github download button on this page, get the latest release zip file from https://github.com/raven-in-westfall/HealRotate/releases
 
-Might be available on curseforge someday...
+Available on Curseforge at https://www.curseforge.com/wow/addons/healrotate
