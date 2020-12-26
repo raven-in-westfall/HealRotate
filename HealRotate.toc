@@ -2,7 +2,7 @@
 ## Title: HealRotate |cff00aa001.4.0|r
 ## Notes: A healer rotation assistant
 ## Author: raven-in-westfall
-## Version: 1.0.0-beta2
+## Version: 1.0.0
 ## SavedVariables: HealRotateDb
 ## OptionalDeps: Ace3
 
