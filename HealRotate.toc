@@ -1,8 +1,8 @@
 ## Interface: 11305
-## Title: HealRotate |cff00aa001.0.0|r
+## Title: HealRotate |cff00aa00@project-version@|r
 ## Notes: A healer rotation assistant
 ## Author: raven-in-westfall
-## Version: 1.0.0
+## Version: @project-version@
 ## SavedVariables: HealRotateDb
 ## OptionalDeps: Ace3
 
